@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BilliardsGame
 내가 만든 당구게임
 
