@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    Rigidbody ball;
+    private Rigidbody ball;
+    private float moveVelocity = 200f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,13 @@ public class Ball : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            this.ball.AddForce(transform.right * 1000);
-            this.ball.AddForce(transform.up * 1000);
+            this.ball.AddForce(transform.up * moveVelocity, ForceMode.Force);
+            this.ball.AddForce(transform.right * moveVelocity, ForceMode.Force);
         }
+
+        //if(input.GetMouseButtonDown(0))
+        //{
+            
+        //}
     }
 }
