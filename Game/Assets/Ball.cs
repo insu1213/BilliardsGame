@@ -6,24 +6,51 @@ public class Ball : MonoBehaviour
 {
     private Rigidbody ball;
     private float moveVelocity = 200f;
+    private Ray ray;
+    private RaycastHit hit;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        this.ball = GetComponent<Rigidbody>();
+        ball = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            this.ball.AddForce(transform.up * moveVelocity, ForceMode.Force);
-            this.ball.AddForce(transform.right * moveVelocity, ForceMode.Force);
+            ball.AddForce(transform.up * moveVelocity, ForceMode.Force);
+            ball.AddForce(transform.right * moveVelocity, ForceMode.Force);
+
         }
 
-        //if(input.GetMouseButtonDown(0))
-        //{
-            
-        //}
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(ClickEvent("Ball"))
+            {
+                Debug.Log("Å¬¸¯µÊ");
+            }
+        }
     }
+
+    bool ClickEvent(string tagName)
+    {
+        if (Physics.Raycast(ray, out hit))
+        {
+            //Debug.Log(hit.transform.gameObject);
+
+            if (hit.transform.gameObject.tag == tagName)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //private void FixedUpdate()
+    //{
+    //}
 }
