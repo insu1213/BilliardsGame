@@ -315,8 +315,8 @@ GameObject:
   - component: {fileID: 1098491284}
   - component: {fileID: 1098491283}
   m_Layer: 6
-  m_Name: "\uAD6C\uCCB4 (7)"
-  m_TagString: Ball
+  m_Name: Yellow Ball
+  m_TagString: Yellow Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,8 +335,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 4
+  m_CollisionDetection: 2
 --- !u!136 &1098491284
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -430,9 +430,10 @@ GameObject:
   - component: {fileID: 1573341153}
   - component: {fileID: 1573341152}
   - component: {fileID: 1573341157}
+  - component: {fileID: 1573341158}
   m_Layer: 6
-  m_Name: "\uAD6C\uCCB4 (1)"
-  m_TagString: Ball
+  m_Name: Red Ball
+  m_TagString: Red Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -544,6 +545,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97cf2b233bd9a074886c1b150641e6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1573341158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573341151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e74627cde71ae4286da83813d3db76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2077612532
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,8 +571,8 @@ GameObject:
   - component: {fileID: 2077612534}
   - component: {fileID: 2077612533}
   m_Layer: 6
-  m_Name: "\uAD6C\uCCB4 (2)"
-  m_TagString: Ball
+  m_Name: White Ball
+  m_TagString: White Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2833,7 +2846,7 @@ GameObject:
   - component: {fileID: 8805566235710249044}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
